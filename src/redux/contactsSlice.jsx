@@ -3,7 +3,6 @@ import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { fetchContacts, addContact, deleteContact } from './operations';
 
-
 const handlePending = state => {
   state.isLoading = true;
 };
@@ -55,4 +54,5 @@ export const contactsReducer = persistReducer(
   persistConfig,
   contactsSlice.reducer
 );
+
 

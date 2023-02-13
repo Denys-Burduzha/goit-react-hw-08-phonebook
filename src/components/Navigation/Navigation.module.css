@@ -1,0 +1,65 @@
+
+
+.nav_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_linkRegister {
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    
+}
+.nav_linkRegister:hover, .nav_linkRegister:focus {
+    color:rgb(0, 181, 0);
+}
+
+.nav_linkRegister:active {
+    color: rgb(3, 183, 3);
+}
+
+
+.nav_linkLogin {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.nav_linkLogin:hover, .nav_linkLogin:focus {
+    color:rgb(0, 181, 0);
+}
+
+.nav_linkLogin:active {
+    color: rgb(3, 183, 3);
+}
+
+.nav_linkHome  {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.nav_linkHome:hover, .nav_linkHome:focus {
+    color:rgb(0, 181, 0);
+}
+
+.nav_linkHome:active {
+    color: rgb(3, 183, 3);
+}
+
+.nav_linkContacts {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.nav_linkContacts:hover, .nav_linkContacts:focus {
+    color:rgb(0, 181, 0);
+}
+
+.nav_linkContacts:active {
+    color: rgb(3, 183, 3);
+}
+
+
+
+

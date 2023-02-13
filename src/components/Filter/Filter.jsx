@@ -7,22 +7,20 @@ const Filter = () => {
   const dispatch = useDispatch();
 
   const onChange = e => {
-    const value = e.target.value.toLowerCase();
-    dispatch(setFilter(value));
+    dispatch(setFilter(e.target.value));
   };
-  
 
   return (
+    <label className={css.label}>
       <input
+        placeholder='Enter name for Search'
         className={css.input}
         type="text"
         name="filter"
         onChange={onChange}
-        placeholder="Enter name for Search"
       />
-      
+    </label>
   );
- 
 }
 
 Filter.propTypes = {

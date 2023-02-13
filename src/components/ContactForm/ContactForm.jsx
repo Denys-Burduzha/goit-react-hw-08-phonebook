@@ -1,26 +1,25 @@
 
 import { useState } from 'react';
-import { useDispatch, useSelector} from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from '../../redux/operations';
 import css from './ContactForm.module.css';
+import { toast } from 'react-toastify';
 import { selectContacts } from 'redux/selectors';
-import { nanoid } from 'nanoid';
+
 
 const ContactForm = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
-  
 
   const handleSubmit = e => {
     e.preventDefault();
-  if (contacts.some(contact => contact.name === name)) {
-      alert(`${name} is already in contacts.`);
+    if (contacts.some(contact => contact.name === name)) {
+      toast.error(`${name} is already in contacts.`)
     } else {
-      dispatch(addContact({id: nanoid(), name, number }));
+      dispatch(addContact({id: toast(), name, number }));
     }
-
     
     reset();
   };
@@ -51,7 +50,7 @@ const ContactForm = () => {
           name="name"
           value={name}
           onChange={handleChangeName}
-          placeholder="Orest Orestovich"
+          placeholder="enter a name"
         />
       </label>
       <label className={css.label}>
@@ -62,7 +61,7 @@ const ContactForm = () => {
           name="number"
           value={number}
           onChange={handleChangeNumber}
-          placeholder="123-45-67"
+          placeholder="enter a number"
         />
       </label>
       <button className={css.btn} type="submit" onSubmit={handleSubmit}>
@@ -72,4 +71,5 @@ const ContactForm = () => {
   );
 }
 
-export default ContactForm;
+
+export default ContactForm
